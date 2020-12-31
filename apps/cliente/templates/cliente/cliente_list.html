@@ -4,6 +4,6 @@
         <table><p>{{cliente.nome}}</p>
         <p>{{cliente.endereco}}</p></table>
         <a href="{% url 'update' cliente.id %}">Editar usuário</a>
-        <a href="{% url 'delete' cliente.id %}">Delete</a>
+        <a href="{% url 'delete' cliente.id %}">Deletar usuário</a>
     {% endfor %}
 {% endblock %}
