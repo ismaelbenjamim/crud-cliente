@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -124,3 +124,12 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+def base_dir_join(*args):
+    return os.path.join(BASE_DIR, *args)
+
+STATIC_ROOT = str(base_dir_join('staticfiles'))
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    base_dir_join('static'),
+)
