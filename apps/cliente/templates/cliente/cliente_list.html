@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+{% block main %}
+    {% for cliente in object_list %}
+        <table><p>{{cliente.nome}}</p>
+        <p>{{cliente.endereco}}</p></table>
+        <a href="{% url 'update' cliente.id %}">Editar usuário</a>
+        <a href="{% url 'delete' cliente.id %}">Delete</a>
+    {% endfor %}
+{% endblock %}
