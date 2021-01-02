@@ -33,7 +33,8 @@ Python manage.py createsuperuser
 Python manage.py runserver
 ```
 
-<h2> Imagens do projeto </h2>
+
+<h2>🎨 Imagens do projeto </h2>
 ![imagem 1](https://i.imgur.com/DstKmNq.png)
-![imagem 2](https://i.imgur.com/c2Au6VF.png)
+![imagem 2](https://imgur.com/c2Au6VF)
 ![imagem 3](https://i.imgur.com/B5evQVr.png)
