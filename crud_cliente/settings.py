@@ -129,7 +129,7 @@ def base_dir_join(*args):
     return os.path.join(BASE_DIR, *args)
 
 STATIC_ROOT = str(base_dir_join('staticfiles'))
-STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
     base_dir_join('static'),
 )

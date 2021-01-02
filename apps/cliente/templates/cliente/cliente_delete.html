@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block main %}
+<h2> teste </h2>
+<form method= "get">
+    <label for="deletaruser">Delete um usuário:</label>
+
+    <select id="deletaruser" name="deletaruser">
+        {% for cliente in object_list %}
+            <option value="{{cliente.id}}">{{cliente.nome}}</option>
+        {% endfor %}
+    </select>
+    <button class="btn btn-info" type="submit">Salvar</button>
+</form>
+    <a href="{% url 'delete' 6 %}">Deletar usuário</a>
+{% endblock %}

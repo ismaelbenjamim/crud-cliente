@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block main %}
+<div class="container pt-3 pb-5">
+    <div class="mb-3">
+        <h2 class="fw-normal text-light">Menu do CRUD de Clientes</br></h2>
+    </div>
+    <div class="cor-padrao">
+        <p>Aplicação criada com o framework Django que realiza o CRUD (Create, Read, Update e </br>
+            Delete) de clientes. Na realização dos testes do projeto foi usado o VENV.</p>
+    </div>
+    <button type="button" class="btn btn-primary"
+            onclick="window.location.href='https://github.com/rootzera/crud-cliente'">Acessar repositório do github
+    </button>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <img src="{% static 'img/icons/users.svg' %}" alt="" width="32" height="32" title="listara">
+                <h5 class="card-title">Lista de todos clientes</h5>
+                <p class="card-text">Verifique a lista de todos os clientes no banco de dados, edite seus dados e delete usuários.</p>
+                <a href="/cliente/list" class="btn btn-primary">Listar usuários</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <img src="{% static 'img/icons/user-plus.svg' %}" alt="" width="32" height="32" title="Code">
+                <h5 class="card-title">Criação de novo cliente</h5>
+                <p class="card-text">Crie novos clientes inserindo os dados necessários para o seu banco de dados.</p>
+                <a href="/cliente/create" class="btn btn-primary">Criar usuário</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <img src="{% static 'img/icons/user-x.svg' %}" alt="" width="32" height="32" title="Code">
+                <h5 class="card-title">Apagar cliente do banco</h5>
+                <p class="card-text">Ação por enquanto indisponível por aqui, acesse o "Listar usuários" para deletar.</p>
+                <a href="#" class="btn btn-primary disabled">Deletar usuário</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+{% include "base/footer.html" %}
+{% endblock %}

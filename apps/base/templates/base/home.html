@@ -1,2 +1,20 @@
 {% extends 'base/base.html' %}
-{% block main %}{% endblock %}
+{% load static %}
+{% block main %}
+    <div class="container py-4">
+        <figure class="text-center">
+            <div class="mb-3">
+                <img src="{% static 'img/icons/code.svg' %}" class="mb-2" alt="" width="40" height="40" title="Code">
+                <h1 class="fw-normal text-light">Projeto com Python e Django:</br></h1>
+                <h1 class="fw-bolder text-light"> CRUD de Clientes</h1>
+            </div>
+            <div class="cor-padrao">
+            <p>Aplicação criada com o framework Django que realiza o CRUD (Create, Read, Update e </br>
+                Delete) de clientes. Na realização dos testes do projeto foi usado o VENV.</p>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='https://github.com/rootzera/crud-cliente'">Acessar repositório do github</button>
+        </figure>
+    </div>
+</div>
+{% include "base/footer.html" %}
+{% endblock %}

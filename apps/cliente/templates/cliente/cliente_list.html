@@ -1,9 +1,31 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block main %}
+<table class="table text-light">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Data de nascimento</th>
+        <th scope="col">Editar usuário</th>
+        <th scope="col">Deletar usuário</th>
+    </tr>
+    </thead>
+    <tbody>
     {% for cliente in object_list %}
-        <table><p>{{cliente.nome}}</p>
-        <p>{{cliente.endereco}}</p></table>
-        <a href="{% url 'update' cliente.id %}">Editar usuário</a>
-        <a href="{% url 'delete' cliente.id %}">Deletar usuário</a>
-    {% endfor %}
+    <tr>
+        <th scope="row">{{cliente.id}}</th>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.endereco}}</td>
+        <td>{{cliente.telefone}}</td>
+        <td>{{cliente.data_nascimento}}</td>
+        <td><a href="{% url 'update' cliente.id %}"><img src="{% static 'img/icons/edit.svg' %}" class="mb-2" alt="" width="24" height="24" title="editar"></a></td>
+        <td><a href="{% url 'delete' cliente.id %}"><img src="{% static 'img/icons/trash-2.svg' %}" class="mb-2" alt="" width="24" height="24" title="delete"></a></td>
+{% endfor %}
+
+    </tr>
+    </tbody>
+</table>
 {% endblock %}
