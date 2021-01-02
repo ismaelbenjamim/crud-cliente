@@ -18,7 +18,7 @@ python -m venv myvenv
 Pip install -r requirements.txt
 ```
 
-4. Realize as migrações para se banco de dados:
+4. Realize as migrações para seu banco de dados:
 ```
 Python manage.py migrate
 ```
@@ -32,3 +32,8 @@ Python manage.py createsuperuser
 ```
 Python manage.py runserver
 ```
+
+<h2> Imagens do projeto </h2>
+![imagem 1](https://i.imgur.com/DstKmNq.png)
+![imagem 2](https://i.imgur.com/c2Au6VF.png)
+![imagem 3](https://i.imgur.com/B5evQVr.png)
